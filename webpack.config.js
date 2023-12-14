@@ -8,8 +8,6 @@ const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const outputFile = "[name].[chunkhash]";
 const assetFile = "[name].[contenthash]";
 
-console.log(process.env);
-
 module.exports = {
   mode: "development",
   entry: "./src/js/main",
@@ -18,15 +16,16 @@ module.exports = {
     filename: `${outputFile}.js`,
     clean: !process.env.WEBPACK_SERVE,
   },
+  resolve: { extensions: [".ts", ".js"] },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|ts)$/,
         exclude: /node_modules/,
         loader: "babel-loader",
       },
       {
-        test: /\.js$/,
+        test: /\.(js|ts)$/,
         exclude: /node_modules/,
         loader: ESLintWebpackPlugin.loader,
       },
