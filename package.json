@@ -3,13 +3,15 @@
     "dev": "webpack serve",
     "build": "webpack --mode=production",
     "lint": "eslint . && prettier --check \"**/*.{js,ts,html}\"",
-    "lint:fix": "eslint --fix . && prettier --write \"**/*.{js,ts,html}\""
+    "lint:fix": "eslint --fix . && prettier --write \"**/*.{js,ts,html}\"",
+    "typecheck": "tsc src/**/*.ts --noEmit --skipLibCheck"
   },
   "devDependencies": {
     "@babel/core": "^7.23.6",
     "@babel/eslint-parser": "^7.23.3",
     "@babel/preset-env": "^7.23.6",
     "@babel/preset-typescript": "^7.23.3",
+    "@types/node": "^20.10.4",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "autoprefixer": "^10.4.16",

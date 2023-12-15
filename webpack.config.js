@@ -8,6 +8,7 @@ const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const outputFile = "[name].[chunkhash]";
 const assetFile = "[name].[contenthash]";
 
+/** @type {import('webpack').Configuration} */
 module.exports = {
   mode: "development",
   entry: "./src/js/main",
